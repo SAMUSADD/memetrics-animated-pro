@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>MeMetrics — Your Value, Measured</title>
+  <meta name="description" content="MeMetrics computes a transparent, explainable DVI score (300–900) to unlock micro‑loans, jobs, and scholarships."/>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <canvas id="bg" aria-hidden="true"></canvas>
+
+  <header class="site-header">
+    <div class="brand">
+      <img src="assets/logo.svg" alt="MeMetrics logo" width="28" height="28" />
+      <span>MeMetrics</span>
+    </div>
+    <nav>
+      <a href="#how">How It Works</a>
+      <a href="#model">Business</a>
+      <a href="#demo">Live Demo</a>
+    </nav>
+    <a class="btn ghost" href="#contact">Request Access</a>
+  </header>
+
+  <main>
+    <!-- HERO -->
+    <section class="hero" id="home">
+      <div class="glow"></div>
+      <h1 class="split" id="headline"><span>Your Value,</span> <span>Measured.</span></h1>
+      <p class="lead">Dynamic Value Identity (DVI) with <strong>explainable</strong> drivers to unlock <em>micro‑loans, jobs,</em> and <em>scholarships</em>.</p>
+      <div class="cta-row">
+        <a class="btn primary" id="liveLink" href="#" target="_blank" rel="noopener">Try Live DVI</a>
+        <button class="btn ghost" id="peek">See it in action</button>
+      </div>
+
+      <div class="hero-cards">
+        <div class="kpi" data-tilt>
+          <div class="kpi-label">DVI</div>
+          <div class="kpi-value" id="kpiDvi">785</div>
+          <div class="kpi-sub good">Excellent</div>
+        </div>
+        <div class="kpi" data-tilt>
+          <div class="kpi-label">Unlocks</div>
+          <div class="kpi-value"><span class="count" data-target="3">0</span></div>
+          <div class="kpi-sub">Loans • Jobs • Grants</div>
+        </div>
+        <div class="kpi" data-tilt>
+          <div class="kpi-label">Explainability</div>
+          <ul class="chips">
+            <li class="chip up">+ Learning Pace</li>
+            <li class="chip up">+ Certifications</li>
+            <li class="chip down">− Overdraft Events</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="scroll-indicator" aria-hidden="true">
+        <span></span>
+      </div>
+    </section>
+
+    <!-- PARTNERS ROW -->
+    <section class="partners reveal" aria-label="Sample partners">
+      <div class="partner-track">
+        <div class="p-badge"><img src="assets/revolut.svg" alt="Revolut"/></div>
+        <div class="p-badge"><img src="assets/intesa.svg" alt="Intesa Sanpaolo"/></div>
+        <div class="p-badge">Fondazione</div>
+        <div class="p-badge">DataCo</div>
+        <div class="p-badge"><img src="assets/revolut.svg" alt="Revolut"/></div>
+        <div class="p-badge"><img src="assets/intesa.svg" alt="Intesa Sanpaolo"/></div>
+      </div>
+    </section>
+
+    <!-- GLASS PROFILE PREVIEW -->
+    <section class="section reveal" id="profile">
+      <h2>Glass profile preview</h2>
+      <div class="glass-wrap">
+        <div class="glass-card">
+          <div class="glass-top">
+            <img class="avatar" src="https://api.dicebear.com/7.x/initials/svg?seed=Samir&fontFamily=Montserrat" alt="Avatar">
+            <div>
+              <div class="name">Samir A.</div>
+              <div class="muted">Economics • Trento, Italy</div>
+            </div>
+          </div>
+          <div class="glass-mid">
+            <div class="mini-gauge">
+              <svg viewBox="0 0 160 160" width="120" height="120" aria-label="DVI gauge">
+                <defs>
+                  <linearGradient id="grad" x1="0" y1="0" x2="1" y2="0">
+                    <stop offset="0%" stop-color="#3B82F6"/>
+                    <stop offset="50%" stop-color="#00E5FF"/>
+                    <stop offset="100%" stop-color="#34D399"/>
+                  </linearGradient>
+                </defs>
+                <circle cx="80" cy="80" r="60" stroke="#e5e7eb" stroke-width="14" fill="none"/>
+                <circle id="arcMini" cx="80" cy="80" r="60" stroke="url(#grad)" stroke-width="14" fill="none" stroke-linecap="round" transform="rotate(-90 80 80)"/>
+              </svg>
+              <div>
+                <div class="score big" id="scoreMini">785</div>
+                <div class="muted">DVI • Excellent</div>
+              </div>
+            </div>
+            <div class="chips">
+              <span class="chip up">+ Certifications</span>
+              <span class="chip up">+ Learning Pace</span>
+              <span class="chip down">− Overdrafts</span>
+            </div>
+          </div>
+          <div class="glass-bottom">
+            <div class="opps">
+              <div class="opp up">Micro‑loan • €1.5k</div>
+              <div class="opp">Internship • DataCo</div>
+              <div class="opp">Scholarship • Fondazione</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- HOW -->
+    <section id="how" class="section reveal">
+      <h2>How it works</h2>
+      <div class="grid three">
+        <div class="card lift">
+          <div class="icon i1"></div>
+          <h3>Connect</h3>
+          <p>Link learning, skills, and optional bank data (e.g., Revolut, Intesa). You control privacy.</p>
+        </div>
+        <div class="card lift">
+          <div class="icon i2"></div>
+          <h3>Measure</h3>
+          <p>AI computes a live DVI (300–900) and explains the top drivers behind it.</p>
+        </div>
+        <div class="card lift">
+          <div class="icon i3"></div>
+          <h3>Access</h3>
+          <p>Unlock fair finance and opportunity—micro‑loans, jobs, and scholarships.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- DEMO -->
+    <section id="demo" class="section reveal">
+      <h2>Interactive demo</h2>
+      <div class="demo card">
+        <label for="skills">Skills level</label>
+        <input id="skills" type="range" min="1" max="5" step="1" value="4" />
+        <label for="pace">Learning pace</label>
+        <input id="pace" type="range" min="0" max="100" step="5" value="70" />
+        <label for="finance">Finance (optional)</label>
+        <input id="finance" type="range" min="0" max="100" step="5" value="80" />
+        <div class="demo-row">
+          <button id="compute" class="btn primary small">Compute DVI</button>
+          <button id="callApi" class="btn ghost small">Call Space API</button>
+        </div>
+        <div class="gauge">
+          <svg viewBox="0 0 160 160" width="200" height="200" aria-label="DVI gauge">
+            <defs>
+              <linearGradient id="grad2" x1="0" y1="0" x2="1" y2="0">
+                <stop offset="0%" stop-color="#3B82F6"/>
+                <stop offset="50%" stop-color="#00E5FF"/>
+                <stop offset="100%" stop-color="#34D399"/>
+              </linearGradient>
+            </defs>
+            <circle cx="80" cy="80" r="60" stroke="#e5e7eb" stroke-width="14" fill="none"/>
+            <circle id="arc" cx="80" cy="80" r="60" stroke="url(#grad2)" stroke-width="14" fill="none" stroke-linecap="round" transform="rotate(-90 80 80)"/>
+          </svg>
+          <div class="gauge-readout">
+            <div id="score" class="score">—</div>
+            <div id="grade" class="grade"></div>
+            <div id="apiNote" class="muted small"></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- BUSINESS -->
+    <section id="model" class="section reveal">
+      <h2>Business model</h2>
+      <div class="grid three">
+        <div class="card list">
+          <h4>B2B API</h4>
+          <ul><li>SaaS subscription</li><li>Per-decision fee</li><li>Webhook to ATS/CRM</li></ul>
+        </div>
+        <div class="card list">
+          <h4>Micro‑finance</h4>
+          <ul><li>Success fee on disbursed loans</li><li>Default reduction vs baseline</li></ul>
+        </div>
+        <div class="card list">
+          <h4>Talent</h4>
+          <ul><li>Employer lead fee</li><li>Time‑to‑hire reduction</li></ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- CONTACT -->
+    <section id="contact" class="section reveal">
+      <h2>Contact</h2>
+      <form class="card contact" onsubmit="event.preventDefault();document.getElementById('sent').classList.add('show')">
+        <input placeholder="Name" required />
+        <input type="email" placeholder="Email" required />
+        <textarea rows="4" placeholder="Message" required></textarea>
+        <button class="btn primary">Send</button>
+        <div id="sent" class="sent">Thanks! We’ll get back to you soon.</div>
+      </form>
+    </section>
+  </main>
+
+  <footer>© <span id="year"></span> MeMetrics</footer>
+
+  <script src="config.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
